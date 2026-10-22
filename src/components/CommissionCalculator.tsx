@@ -28,9 +28,6 @@ export const CommissionCalculator: React.FC<CommissionCalculatorProps> = ({ onOp
   // Extra net income kept in pocket
   const netEarningsDifference = Math.max(0, selfEmployedAnnualEarnings - employedAnnualEarnings);
 
-  // Advanced Commission (up to 30% unlocked upfront on listing)
-  const upfrontCashPerListing = feePerDeal * 0.3;
-
   const formatCurrency = (val: number) => {
     return new Intl.NumberFormat('en-GB', {
       style: 'currency',
@@ -135,19 +132,17 @@ export const CommissionCalculator: React.FC<CommissionCalculatorProps> = ({ onOp
                 </div>
               </div>
 
-              {/* Advanced Commission Feature Note */}
-              <div className="p-4 rounded-xl bg-[#0E827C]/10 border border-[#0E827C]/30 flex items-start gap-3">
-                <Zap className="w-5 h-5 text-[#0E827C] shrink-0 mt-0.5" />
+              {/* Advanced Commission Feature Note — client-approved copy */}
+              <div className="p-4 rounded-xl bg-[#B59A6D]/10 border border-[#B59A6D]/35 flex items-start gap-3">
+                <Zap className="w-5 h-5 text-[#B59A6D] shrink-0 mt-0.5" />
                 <div className="text-xs space-y-1">
                   <span className="font-bold text-white block">
                     Plus: Up to 30% Advanced Commission on Day 1 of Listing
                   </span>
-                  <p className="text-[#94A3B8] leading-relaxed">
+                  <p className="text-[#B7B1A6] leading-relaxed">
                     Under the Advanced Commission scheme, you can unlock up to{' '}
-                    <span className="text-[#0E827C] font-semibold font-mono">
-                      {formatCurrency(upfrontCashPerListing)}
-                    </span>{' '}
-                    per listing upon taking the instruction, solving the 4–6 month conveyancing lag.
+                    <span className="text-[#B59A6D] font-semibold font-mono">£5,000 per month</span>{' '}
+                    upon taking the instruction, solving the 4–6 month conveyancing lag.
                   </p>
                 </div>
               </div>

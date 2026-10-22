@@ -68,12 +68,12 @@ export const FREE_RESOURCES: ResourceItem[] = [
     id: 'advanced-commission',
     title: 'Advanced Commission Guide',
     category: 'Cashflow & Revenue',
-    tagline: 'Unlock up to 30% upfront listing fees without waiting months for completion.',
+    tagline: 'Unlock up to 30% upfront — and up to £5,000 per month — without waiting months for completion.',
     description:
-      'Traditional estate agents wait 16 to 24 weeks from instruction to completion to receive a fraction of their commission. The Advanced Commission model changes everything by providing capital on day one of listing.',
+      'Traditional estate agents wait 16 to 24 weeks from instruction to completion to receive a fraction of their commission. The Advanced Commission model changes everything by providing capital on day one of listing, unlocking up to £5,000 per month upon taking the instruction.',
     highlights: [
       'How to access up to 30% of your fee upfront upon winning the listing',
-      'Eliminate cashflow lulls between instruction and conveyancing completion',
+      'Unlock up to £5,000 per month and solve the 4–6 month conveyancing lag',
       'The exact contract clauses and legal partner agreements used across the UK',
       'How to reinvest upfront capital into hyper-local vendor marketing',
     ],

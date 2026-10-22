@@ -12,8 +12,8 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-[#07090d]">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(198,164,106,0.16),transparent_42%),radial-gradient(ellipse_at_bottom_right,rgba(14,130,124,0.18),transparent_40%)]" />
+    <section className="relative min-h-[100svh] overflow-hidden bg-[#0E0E0F]">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(181,154,109,0.16),transparent_42%),radial-gradient(ellipse_at_bottom_right,rgba(181,154,109,0.06),transparent_40%)]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 lg:pt-32 lg:pb-20 grid lg:grid-cols-12 gap-10 lg:gap-6 items-center min-h-[100svh]">
         <motion.div
@@ -31,9 +31,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
 
           <h1 className="text-[2.6rem] sm:text-6xl lg:text-[4.4rem] font-semibold tracking-[-0.03em] leading-[0.95] text-[#F6F3EC]">
             Stop building someone else's agency.
-            <span className="block font-editorial italic font-normal text-[#C6A46A] mt-2">
-              Build your own.
-            </span>
+<span className="block font-editorial italic font-normal text-[#B59A6D] mt-2">
+                Build your own.
+              </span>
           </h1>
 
           <p className="text-base sm:text-lg text-[#B7B1A6] max-w-xl leading-relaxed">
@@ -43,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               onClick={onOpenBooking}
-              className="btn-primary px-7 py-4 rounded-full bg-[#0E827C] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#0E827C]/25 flex items-center justify-center gap-2 cursor-pointer"
+              className="btn-primary px-7 py-4 rounded-full font-semibold text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer"
             >
               Book My Free Strategy Call
               <ArrowRight className="w-4 h-4" />
@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
           </div>
 
           <div className="flex items-center gap-4 pt-2">
-            <div className="flex text-[#C6A46A]">
+            <div className="flex text-[#B59A6D]">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-current" />
               ))}
@@ -84,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
             <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between gap-4">
               <div>
                 <p className="text-lg font-semibold text-white">Chris Buckler</p>
-                <p className="text-sm text-[#C6A46A]">Self-employed estate agency coach</p>
+                <p className="text-sm text-[#B59A6D]">Self-employed estate agency coach</p>
               </div>
               <button
                 onClick={() => onNavigate('about')}
@@ -101,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7, ease }}
           >
-            <span className="font-editorial text-3xl text-[#C6A46A] leading-none">#74</span>
+            <span className="font-editorial text-3xl text-[#B59A6D] leading-none">#74</span>
             <span className="text-xs text-[#E7E2D6] leading-snug">
               Sunday Times 100
               <span className="block text-[#8E887E]">Britain's fastest-growing</span>

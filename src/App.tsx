@@ -45,7 +45,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0F1A] text-[#F8F7F3] selection:bg-[#0E827C] selection:text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0E0E0F] text-[#F5F5F5] selection:bg-[#B59A6D] selection:text-[#0E0E0F] flex flex-col justify-between">
       <CustomCursor />
       {/* 3-Zone Fixed Navbar with Real Logo */}
       <Header

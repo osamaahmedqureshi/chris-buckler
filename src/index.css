@@ -1,10 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #07090d;
-  --ivory: #f6f3ec;
-  --gold: #c6a46a;
+  /* Matched to chrisbuckler.co.uk — near-black + muted gold */
+  --ink: #0e0e0f;
+  --ink-soft: #161617;
+  --ivory: #f5f5f5;
+  --gold: #b59a6d;
+  --gold-bright: #c9b088;
   --teal: #0e827c;
+  --muted: #a3a3a3;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -103,8 +107,25 @@ a:active {
   left: 140%;
 }
 
+.btn-primary {
+  background: var(--gold) !important;
+  color: #0e0e0f !important;
+  box-shadow: 0 12px 28px rgba(181, 154, 109, 0.28);
+}
+
 .btn-primary:hover {
-  box-shadow: 0 18px 40px rgba(14, 130, 124, 0.38);
+  background: var(--gold-bright) !important;
+  box-shadow: 0 18px 40px rgba(181, 154, 109, 0.4);
+}
+
+.btn-ghost {
+  border-color: rgba(245, 245, 245, 0.35) !important;
+  color: var(--ivory) !important;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold) !important;
 }
 
 .nav-link {

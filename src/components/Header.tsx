@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenB
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         isScrolled
-          ? 'bg-[#07090d]/80 backdrop-blur-xl border-b border-white/10 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.35)]'
+          ? 'bg-[#0E0E0F]/90 backdrop-blur-xl border-b border-white/10 py-3 shadow-[0_10px_40px_rgba(0,0,0,0.35)]'
           : 'bg-gradient-to-b from-black/50 to-transparent py-5'
       }`}
     >
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenB
           <div className="hidden sm:flex items-center gap-3 shrink-0">
             <button
               onClick={onOpenBooking}
-              className="btn-primary px-5 py-2.5 text-xs sm:text-sm font-semibold text-white bg-[#0E827C] hover:bg-[#12a39c] rounded-full shadow-md shadow-[#0E827C]/25 flex items-center gap-2 cursor-pointer group"
+              className="btn-primary px-5 py-2.5 text-xs sm:text-sm font-semibold rounded-full flex items-center gap-2 cursor-pointer group"
             >
               <Calendar className="w-3.5 h-3.5 text-white/90" />
               <span>Schedule a Discovery Call</span>
@@ -91,7 +91,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenB
           <div className="lg:hidden flex items-center gap-2">
             <button
               onClick={onOpenBooking}
-              className="sm:hidden px-3 py-1.5 text-xs font-semibold text-white bg-[#0E827C] rounded-lg cursor-pointer"
+              className="btn-primary sm:hidden px-3 py-1.5 text-xs font-semibold rounded-full cursor-pointer"
             >
               Book Call
             </button>
