@@ -61,13 +61,13 @@ export const PillarsSection: React.FC<PillarsSectionProps> = ({ onNavigate, onOp
   ];
 
   return (
-    <section id="pillars" className="relative py-24 sm:py-32 bg-[#0B0E13]">
+    <section id="pillars" className="relative py-24 sm:py-32 bg-[#0E0E0F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal from="left" className="max-w-2xl mb-14 space-y-4">
-          <p className="text-xs tracking-[0.28em] uppercase text-[#C6A46A]">How we work</p>
+          <p className="text-xs tracking-[0.28em] uppercase text-[#B59A6D]">How we work</p>
           <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-[#F6F3EC]">
             Four ways to build
-            <span className="font-editorial italic font-normal text-[#C6A46A]"> the agency you own.</span>
+            <span className="font-editorial italic font-normal text-[#B59A6D]"> the agency you own.</span>
           </h2>
         </Reveal>
 
@@ -76,12 +76,12 @@ export const PillarsSection: React.FC<PillarsSectionProps> = ({ onNavigate, onOp
             const Icon = pillar.icon;
             return (
               <StaggerItem key={pillar.title} from={pillar.from}>
-                <article className="lift-card group h-full rounded-[1.6rem] overflow-hidden border border-white/10 bg-[#12161d]">
+                <article className="lift-card group h-full rounded-[1.6rem] overflow-hidden border border-white/10 bg-[#161617]">
                   <div className="photo-zoom relative aspect-[16/10]">
                     <img src={pillar.image} alt={pillar.title} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#12161d] via-[#12161d]/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#161617] via-[#161617]/20 to-transparent" />
                     <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full bg-black/50 backdrop-blur px-3 py-1.5 text-xs text-white border border-white/10">
-                      <Icon className="w-3.5 h-3.5 text-[#C6A46A]" />
+                      <Icon className="w-3.5 h-3.5 text-[#B59A6D]" />
                       {pillar.title}
                     </div>
                     <span className="absolute top-4 right-4 font-editorial text-2xl text-white/80">{pillar.badge}</span>
@@ -91,7 +91,7 @@ export const PillarsSection: React.FC<PillarsSectionProps> = ({ onNavigate, onOp
                     <p className="text-sm text-[#B7B1A6] leading-relaxed">{pillar.description}</p>
                     <button
                       onClick={pillar.onAction}
-                      className="btn-ghost inline-flex items-center gap-2 text-sm font-semibold text-[#F6F3EC] border-b border-[#C6A46A]/60 pb-1 cursor-pointer"
+                      className="btn-ghost inline-flex items-center gap-2 text-sm font-semibold text-[#F6F3EC] border-b border-[#B59A6D]/60 pb-1 cursor-pointer"
                     >
                       {pillar.actionText}
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

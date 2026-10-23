@@ -75,7 +75,7 @@ export default function App() {
               onOpenBooking={() => handleOpenBooking('Calculator - 70% Commission Model')}
             />
 
-            <section className="py-24 sm:py-32 bg-[#0B0E13] relative overflow-hidden">
+            <section className="py-24 sm:py-32 bg-[#0E0E0F] relative overflow-hidden">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                   <Reveal from="left" className="lg:col-span-6">
@@ -93,10 +93,10 @@ export default function App() {
                   </Reveal>
 
                   <Reveal from="right" className="lg:col-span-6 space-y-5">
-                    <p className="text-xs tracking-[0.28em] uppercase text-[#C6A46A]">About Chris</p>
+                    <p className="text-xs tracking-[0.28em] uppercase text-[#B59A6D]">About Chris</p>
                     <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-[#F6F3EC] leading-[1.05]">
                       Built, scaled, and
-                      <span className="font-editorial italic font-normal text-[#C6A46A]"> sold.</span>
+                      <span className="font-editorial italic font-normal text-[#B59A6D]"> sold.</span>
                     </h2>
                     <p className="text-base text-[#B7B1A6] leading-relaxed">
                       Chris has spent 15 years doing what he now teaches: building self-employed estate agency models from the ground up. He founded The Estate Agency, scaled it nationally, and sold it to TAUK in 2025, where he now serves as Chief Commercial Officer.
@@ -123,12 +123,12 @@ export default function App() {
 
             <section className="relative py-28 overflow-hidden">
               <img src="/images/chris-buckler-hero.png" alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-30" />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#07090d] via-[#07090d]/75 to-[#07090d]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E0F] via-[#0E0E0F]/75 to-[#0E0E0F]" />
               <Reveal className="relative z-10 max-w-3xl mx-auto px-4 text-center space-y-6">
-                <p className="text-xs tracking-[0.28em] uppercase text-[#C6A46A]">Ready to grow</p>
+                <p className="text-xs tracking-[0.28em] uppercase text-[#B59A6D]">Ready to grow</p>
                 <h2 className="text-4xl sm:text-6xl font-semibold tracking-tight text-white">
                   Keep more of
-                  <span className="font-editorial italic font-normal text-[#C6A46A]"> every fee.</span>
+                  <span className="font-editorial italic font-normal text-[#B59A6D]"> every fee.</span>
                 </h2>
                 <p className="text-base sm:text-lg text-[#D5D0C6] leading-relaxed">
                   Traditional agencies have capped income and limited freedom for too long. There is a model where you keep more of what you earn, work the hours that suit you, and build something that is yours.
@@ -136,7 +136,7 @@ export default function App() {
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
                     onClick={() => handleOpenBooking('Ready to Grow - Strategy Call')}
-                    className="btn-primary w-full sm:w-auto px-8 py-4 rounded-full bg-[#0E827C] text-white font-semibold flex items-center justify-center gap-2 cursor-pointer"
+                    className="btn-primary w-full sm:w-auto px-8 py-4 rounded-full bg-[#B59A6D] text-[#0E0E0F] font-semibold flex items-center justify-center gap-2 cursor-pointer"
                   >
                     Book a free 15-minute call
                     <ArrowRight className="w-4 h-4" />
@@ -149,8 +149,8 @@ export default function App() {
                   </button>
                 </div>
                 <div className="pt-2 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#C9C3B8]">
-                  <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#C6A46A]" /> Direct with Chris</span>
-                  <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C6A46A]" /> Confidential</span>
+                  <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#B59A6D]" /> Direct with Chris</span>
+                  <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#B59A6D]" /> Confidential</span>
                 </div>
               </Reveal>
             </section>

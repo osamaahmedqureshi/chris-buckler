@@ -58,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenB
           </button>
 
           {/* Navigation Links (Desktop) */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#94A3B8]">
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-[#A3A3A3]">
             {navItems.map((item) => {
               const isActive = currentView === item.view;
               return (
@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenB
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-[#94A3B8] hover:text-[#F8F7F3] rounded-lg focus:outline-none"
+              className="p-2 text-[#A3A3A3] hover:text-[#F5F5F5] rounded-lg focus:outline-none"
               aria-label="Toggle navigation menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -107,7 +107,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenB
 
         {/* Mobile menu dropdown */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-3 pt-4 pb-4 border-t border-[#1E3352] bg-[#101C30]/95 backdrop-blur-xl rounded-2xl p-5 shadow-2xl">
+          <div className="lg:hidden mt-3 pt-4 pb-4 border-t border-[#2A2A2A] bg-[#161617]/95 backdrop-blur-xl rounded-2xl p-5 shadow-2xl">
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => {
                 const isActive = currentView === item.view;
@@ -120,22 +120,22 @@ export const Header: React.FC<HeaderProps> = ({ currentView, onNavigate, onOpenB
                     }}
                     className={`text-left text-sm font-medium py-2.5 px-3 rounded-lg transition-colors flex items-center justify-between ${
                       isActive
-                        ? 'bg-[#0E827C]/15 text-white font-semibold border border-[#0E827C]/30'
-                        : 'text-[#94A3B8] hover:text-white hover:bg-[#132238]'
+                        ? 'bg-[#B59A6D]/15 text-white font-semibold border border-[#B59A6D]/30'
+                        : 'text-[#A3A3A3] hover:text-white hover:bg-[#1A1A1A]'
                     }`}
                   >
                     <span>{item.label}</span>
-                    {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#0E827C]" />}
+                    {isActive && <span className="w-1.5 h-1.5 rounded-full bg-[#B59A6D]" />}
                   </button>
                 );
               })}
-              <div className="pt-3 mt-1 border-t border-[#1E3352]">
+              <div className="pt-3 mt-1 border-t border-[#2A2A2A]">
                 <button
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     onOpenBooking();
                   }}
-                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#0E827C] text-white font-semibold text-sm cursor-pointer shadow-lg shadow-[#0E827C]/25"
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#B59A6D] text-[#0E0E0F] font-semibold text-sm cursor-pointer shadow-lg shadow-[#B59A6D]/25"
                 >
                   <Calendar className="w-4 h-4" />
                   <span>Schedule a Discovery Call</span>

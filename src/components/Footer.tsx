@@ -9,7 +9,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => {
   return (
-    <footer className="bg-[#070C14] border-t border-[#1E3352]/80 text-[#94A3B8] py-16">
+    <footer className="bg-[#0E0E0F] border-t border-[#2A2A2A]/80 text-[#A3A3A3] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
           {/* Brand Info & Mission */}
@@ -23,16 +23,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                   (e.currentTarget as HTMLElement).style.display = 'none';
                 }}
               />
-              <span className="text-xl font-bold tracking-tight text-[#F8F7F3] font-sans">
+              <span className="text-xl font-bold tracking-tight text-[#F5F5F5] font-sans">
                 CHRIS BUCKLER
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-[#718096] max-w-sm leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#6B6B6B] max-w-sm leading-relaxed">
               Helping UK estate agents make the leap from capped, 60-hour employed weeks to profitable, self-employed business ownership — keeping up to 70% of every fee.
             </p>
 
-            <div className="pt-2 text-xs text-[#C9A66B] font-mono">
+            <div className="pt-2 text-xs text-[#B59A6D] font-mono">
               Chief Commercial Officer at The Agency UK (TAUK) • Sunday Times 100 (#74)
             </div>
 
@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 href="https://linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#101C30] border border-[#1E3352] flex items-center justify-center text-[#94A3B8] hover:text-[#0E827C] hover:border-[#0E827C] transition-colors"
+                className="w-9 h-9 rounded-lg bg-[#161617] border border-[#2A2A2A] flex items-center justify-center text-[#A3A3A3] hover:text-[#B59A6D] hover:border-[#B59A6D] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 href="https://instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#101C30] border border-[#1E3352] flex items-center justify-center text-[#94A3B8] hover:text-[#0E827C] hover:border-[#0E827C] transition-colors"
+                className="w-9 h-9 rounded-lg bg-[#161617] border border-[#2A2A2A] flex items-center justify-center text-[#A3A3A3] hover:text-[#B59A6D] hover:border-[#B59A6D] transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 href="https://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#101C30] border border-[#1E3352] flex items-center justify-center text-[#94A3B8] hover:text-[#0E827C] hover:border-[#0E827C] transition-colors"
+                className="w-9 h-9 rounded-lg bg-[#161617] border border-[#2A2A2A] flex items-center justify-center text-[#A3A3A3] hover:text-[#B59A6D] hover:border-[#B59A6D] transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 href="https://youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-[#101C30] border border-[#1E3352] flex items-center justify-center text-[#94A3B8] hover:text-[#0E827C] hover:border-[#0E827C] transition-colors"
+                className="w-9 h-9 rounded-lg bg-[#161617] border border-[#2A2A2A] flex items-center justify-center text-[#A3A3A3] hover:text-[#B59A6D] hover:border-[#B59A6D] transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
@@ -177,14 +177,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
           </div>
 
           {/* Direct Strategy Booking Card */}
-          <div className="md:col-span-3 bg-[#101C30] border border-[#1E3352] rounded-2xl p-5 space-y-3 text-xs">
-            <span className="text-[#C9A66B] font-bold block">Discovery Strategy Call</span>
-            <p className="text-[#718096] leading-relaxed text-[11px]">
+          <div className="md:col-span-3 bg-[#161617] border border-[#2A2A2A] rounded-2xl p-5 space-y-3 text-xs">
+            <span className="text-[#B59A6D] font-bold block">Discovery Strategy Call</span>
+            <p className="text-[#6B6B6B] leading-relaxed text-[11px]">
               Ready to see what keeping up to 70% of every fee looks like in your local patch? Let's talk.
             </p>
             <button
               onClick={onOpenBooking}
-              className="btn-primary w-full mt-2 py-2.5 px-4 rounded-full bg-[#0E827C] hover:bg-[#12a39c] text-white font-semibold shadow-md shadow-[#0E827C]/20 flex items-center justify-center gap-1.5 cursor-pointer"
+              className="btn-primary w-full mt-2 py-2.5 px-4 rounded-full bg-[#B59A6D] hover:bg-[#c9b088] text-[#0E0E0F] font-semibold shadow-md shadow-[#B59A6D]/20 flex items-center justify-center gap-1.5 cursor-pointer"
             >
               <span>Schedule a Free Call</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -193,7 +193,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
         </div>
 
         {/* Legal & Copyright Strip */}
-        <div className="pt-8 border-t border-[#1E3352]/70 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#718096]">
+        <div className="pt-8 border-t border-[#2A2A2A]/70 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6B6B6B]">
           <p>© 2026 Chris Buckler. Designed by Blank Box</p>
           <div className="flex flex-wrap items-center gap-4 text-[11px]">
             <span>Company No 01234567. Registered in England &amp; Wales.</span>
