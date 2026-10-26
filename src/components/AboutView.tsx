@@ -84,7 +84,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenBooking }) => {
                 <div className="text-xs">
                   <span className="font-bold text-white block">{SUNDAY_TIMES_BADGE_TITLE}</span>
                   <span className="text-[#A3A3A3]">
-                    #74 with TAUK (2026) — {SUNDAY_TIMES_BADGE_SUBLINE}
+                    #74 with TAUK — {SUNDAY_TIMES_BADGE_SUBLINE}
                   </span>
                 </div>
               </div>

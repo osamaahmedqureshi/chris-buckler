@@ -131,7 +131,7 @@ export default function App() {
                   <span className="font-editorial italic font-normal text-[#B59A6D]"> every fee.</span>
                 </h2>
                 <p className="text-base sm:text-lg text-[#D5D0C6] leading-relaxed">
-                  Traditional agencies have capped income and limited freedom for too long. There is a model where you keep more of what you earn, work the hours that suit you, and build something that is yours.
+                  Traditional agencies have capped income and limited freedom for too long. There is a model where you keep more of what you earn, work the hours that suit you, and build a profitable business so that you can live the life that you want.
                 </p>
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button

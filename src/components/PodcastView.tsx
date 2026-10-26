@@ -1,7 +1,7 @@
 import React from 'react';
 import { Radio, Play, ExternalLink, Headphones, ArrowRight, Share2, Sparkles } from 'lucide-react';
 import { Reveal } from './Reveal';
-import { PODCAST_EPISODES } from '../data/content';
+import { PODCAST_EPISODES, PODCAST_NAME } from '../data/content';
 
 interface PodcastViewProps {
   onOpenBooking: () => void;
@@ -15,7 +15,7 @@ export const PodcastView: React.FC<PodcastViewProps> = ({ onOpenBooking }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <Reveal from="left" className="lg:col-span-7 space-y-6">
             <div className="flex items-center gap-2 text-xs sm:text-sm text-[#B59A6D] font-medium tracking-wide">
-              <span>Estate Agency Mastery Podcast</span>
+              <span>{PODCAST_NAME} Podcast</span>
               <span aria-hidden="true">•</span>
               <span>Hosted by Chris Buckler</span>
             </div>
@@ -26,7 +26,7 @@ export const PodcastView: React.FC<PodcastViewProps> = ({ onOpenBooking }) => {
               </span>
             </h1>
             <p className="text-base sm:text-lg text-[#A3A3A3] leading-relaxed">
-              No corporate PR. No generic sales mantras. Honest, unfiltered conversations with the agents, founders, and operators who built what you're trying to build — from overcoming corporate employment fears to winning £1M+ instructions at 2% fees.
+              No corporate PR. No generic sales mantras. Honest, unfiltered conversations with the agents, founders, and operators who built what you're trying to build — from overcoming corporate employment fears to winning £5M+ instructions at 2% fees.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
@@ -69,7 +69,7 @@ export const PodcastView: React.FC<PodcastViewProps> = ({ onOpenBooking }) => {
               </div>
               <div className="p-5 bg-[#161617] border-t border-[#2A2A2A] flex items-center justify-between text-xs">
                 <div>
-                  <span className="font-bold text-white block">Estate Agency Mastery</span>
+                  <span className="font-bold text-white block">{PODCAST_NAME}</span>
                   <span className="text-[#B59A6D]">Weekly In-Depth Interviews</span>
                 </div>
                 <span className="bg-[#B59A6D]/15 text-[#B59A6D] border border-[#B59A6D]/30 px-3 py-1 rounded-full font-mono font-semibold">

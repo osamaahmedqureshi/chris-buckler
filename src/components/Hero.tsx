@@ -3,7 +3,7 @@ import { ArrowRight, Star } from 'lucide-react';
 import { motion } from 'motion/react';
 import type { PageView } from '../types';
 import {
-  ADVANCED_COMMISSION_GUIDE_CTA,
+  FINANCIAL_SUPPORT_CTA,
   SUNDAY_TIMES_BADGE_SUBLINE,
   SUNDAY_TIMES_BADGE_TITLE,
 } from '../data/content';
@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 onClick={() => onNavigate('resources')}
                 className="btn-ghost w-full px-6 py-3 rounded-full border border-white/35 bg-black/30 backdrop-blur-sm text-white font-medium text-sm cursor-pointer"
               >
-                {ADVANCED_COMMISSION_GUIDE_CTA}
+                {FINANCIAL_SUPPORT_CTA}
               </button>
             </div>
 
@@ -136,7 +136,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 onClick={() => onNavigate('resources')}
                 className="btn-ghost px-6 py-4 rounded-full border border-white/15 bg-white/5 text-[#F5F5F5] font-medium text-base cursor-pointer"
               >
-                {ADVANCED_COMMISSION_GUIDE_CTA}
+                {FINANCIAL_SUPPORT_CTA}
               </button>
             </div>
 
@@ -147,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 ))}
               </div>
               <p className="text-sm text-[#A3A3A3]">
-                CCO, The Agency UK · {SUNDAY_TIMES_BADGE_TITLE}
+                CCO, The Agency UK · {SUNDAY_TIMES_BADGE_TITLE} (#74)
               </p>
             </div>
           </motion.div>
@@ -186,37 +186,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
               transition={{ delay: 0.7, duration: 0.7, ease }}
             >
               <span className="font-editorial text-3xl text-[#B59A6D] leading-none">#74</span>
-              <span className="text-xs text-[#E7E2D6] leading-snug max-w-[11.5rem]">
+              <span className="text-xs text-[#E7E2D6] leading-snug max-w-[12rem]">
                 {SUNDAY_TIMES_BADGE_TITLE}
                 <span className="block text-[#8E887E]">{SUNDAY_TIMES_BADGE_SUBLINE}</span>
               </span>
             </motion.div>
           </motion.div>
-        </div>
-      </div>
-
-      {/* Shared marquee strip */}
-      <div className="relative z-10 border-y border-white/10 bg-black/40">
-        <div className="marquee py-3.5 sm:py-4">
-          <div className="marquee-track text-[11px] sm:text-xs tracking-[0.22em] uppercase text-[#B59A6D]">
-            {Array.from({ length: 2 }).map((_, loop) => (
-              <div key={loop} className="flex gap-10 pr-10">
-                {[
-                  'Up to 70% of every fee',
-                  '15 years building agencies',
-                  '30% advanced commission',
-                  '1-on-1 coaching',
-                  'London · Manchester · Nationwide',
-                  'Sold The Estate Agency to TAUK',
-                ].map((item) => (
-                  <span key={`${loop}-${item}`} className="flex items-center gap-10">
-                    {item}
-                    <span className="w-1 h-1 rounded-full bg-[#B59A6D]" />
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

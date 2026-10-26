@@ -39,7 +39,7 @@ export const PillarsSection: React.FC<PillarsSectionProps> = ({ onNavigate, onOp
       badge: '03',
       icon: Radio,
       image: '/images/chris-buckler-podcast.jpg',
-      headline: 'Estate Agency Mastery',
+      headline: 'Estate Agency Done Properly',
       description:
         'Honest conversations with the agents, founders, and operators who built what you are trying to build.',
       actionText: 'Listen now',

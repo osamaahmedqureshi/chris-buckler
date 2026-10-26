@@ -2,7 +2,8 @@ import React from 'react';
 import { Linkedin, Instagram, Facebook, Youtube, ArrowRight } from 'lucide-react';
 import type { PageView } from '../types';
 import {
-  ADVANCED_COMMISSION_CTA_LABEL,
+  FINANCIAL_SUPPORT_CTA,
+  SUNDAY_TIMES_BADGE_SUBLINE,
   SUNDAY_TIMES_BADGE_TITLE,
 } from '../data/content';
 
@@ -36,8 +37,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               Helping UK estate agents make the leap from capped, 60-hour employed weeks to profitable, self-employed business ownership — keeping up to 70% of every fee.
             </p>
 
-            <div className="pt-2 text-xs text-[#B59A6D] font-mono">
-              Chief Commercial Officer at The Agency UK (TAUK) • {SUNDAY_TIMES_BADGE_TITLE} (#74)
+            <div className="pt-2 text-xs text-[#B59A6D] font-mono leading-relaxed">
+              Chief Commercial Officer at The Agency UK (TAUK)
+              <span className="block mt-1">
+                #74 {SUNDAY_TIMES_BADGE_TITLE} — {SUNDAY_TIMES_BADGE_SUBLINE}
+              </span>
             </div>
 
             {/* Social Media Links from live site */}
@@ -143,17 +147,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
                   >
-                    {ADVANCED_COMMISSION_CTA_LABEL}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://funnels.chrisbuckler.co.uk/home-524729"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
-                  >
-                    Team Prospectus
+                    {FINANCIAL_SUPPORT_CTA}
                   </a>
                 </li>
                 <li>

@@ -1,25 +1,12 @@
 import type { Testimonial, ResourceItem, PodcastEpisode, EventItem } from '../types';
 
-/**
- * Shared recognition + CTA copy (single source of truth).
- *
- * Sunday Times 100 verified: TAUK ranked #74 on The Sunday Times 100 2026 —
- * Britain’s fastest-growing private companies.
- */
-export const SUNDAY_TIMES_BADGE_TITLE = 'Sunday Times 100';
+/** Client meeting (Oct 2026) — shared labels */
+export const FINANCIAL_SUPPORT_CTA = 'Financial support for going self-employed';
+export const PODCAST_NAME = 'Estate Agency Done Properly';export const SUNDAY_TIMES_BADGE_TITLE = 'Sunday Times 100';
 export const SUNDAY_TIMES_BADGE_SUBLINE =
-  "Britain's fastest-growing private companies";
+  "Britain's fastest-growing privately owned businesses";
 export const SUNDAY_TIMES_ABOUT_LINE =
-  "TAUK is recognised in The Sunday Times 100, celebrating Britain's fastest-growing private companies — ranked #74 in 2026.";
-
-/**
- * Advanced Commission CTAs.
- * Client requested a rename beginning “Financial Support for…” —
- * full phrase not yet confirmed, so published labels stay unchanged.
- * When confirmed, update ADVANCED_COMMISSION_CTA_LABEL / GUIDE_CTA only.
- */
-export const ADVANCED_COMMISSION_CTA_LABEL = 'Advanced Commission';
-export const ADVANCED_COMMISSION_GUIDE_CTA = 'Free Advanced Commission guide';
+  "TAUK is ranked #74 on The Sunday Times 100 — Britain's fastest-growing privately owned businesses (2026).";
 
 export const TESTIMONIALS: Testimonial[] = [
   {
@@ -87,7 +74,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FREE_RESOURCES: ResourceItem[] = [
   {
     id: 'advanced-commission',
-    title: `${ADVANCED_COMMISSION_CTA_LABEL} Guide`,
+    title: FINANCIAL_SUPPORT_CTA,
     category: 'Cashflow & Revenue',
     tagline: 'Unlock up to 30% upfront — and up to £5,000 per month — without waiting months for completion.',
     description:
@@ -101,23 +88,6 @@ export const FREE_RESOURCES: ResourceItem[] = [
     pages: 18,
     format: 'Comprehensive PDF Guide + Calculator',
     funnelUrl: 'https://funnels.chrisbuckler.co.uk/home-page-advanced-commission',
-  },
-  {
-    id: 'team-prospectus',
-    title: 'EAD Partnership Prospectus',
-    category: 'Agency Scaling',
-    tagline: 'The blueprint for scaling from solo broker to a team of self-employed partners.',
-    description:
-      'Everything you need to attract, onboard, and retain high-performing estate agents under your personal umbrella brand, sharing back-office infrastructure while preserving 70% margins.',
-    highlights: [
-      'The recruitment script that attracts experienced high-street branch managers',
-      'Commission split tiering: keeping 70% while rewarding your associate brokers',
-      'Full technology stack: CRM, portal feeds, compliance, and anti-money laundering',
-      'Building an asset that pays you overrides whether you are in the office or abroad',
-    ],
-    pages: 24,
-    format: 'Executive Prospectus + Slide Deck',
-    funnelUrl: 'https://funnels.chrisbuckler.co.uk/home-524729',
   },
   {
     id: 'transition-plan',
@@ -179,7 +149,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     duration: '52 mins',
     summary:
       'Why modern affluent vendors care about the personal broker representing their property rather than the physical shop window on the high street.',
-    topics: ['High street obsolescence', 'Winning £1m+ stock', 'Personal branding on LinkedIn', 'Negotiating sole agency'],
+    topics: ['High street obsolescence', 'Winning £5m+ stock', 'Personal branding on LinkedIn', 'Negotiating sole agency'],
     spotifyUrl: 'https://open.spotify.com/',
     appleUrl: 'https://podcasts.apple.com/',
     youtubeUrl: 'https://youtube.com/',
