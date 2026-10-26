@@ -16,7 +16,6 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #b59a6d #10141b;
-  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -46,7 +45,6 @@ body {
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   background: var(--ink);
   color: var(--ivory);
-  overflow-x: hidden;
 }
 
 .font-editorial {

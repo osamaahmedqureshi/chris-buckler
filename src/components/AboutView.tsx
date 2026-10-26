@@ -2,6 +2,7 @@ import React from 'react';
 import { Award, ArrowRight, Globe } from 'lucide-react';
 import { Reveal } from './Reveal';
 import {
+  SUNDAY_TIMES_ABOUT_LINE,
   SUNDAY_TIMES_BADGE_SUBLINE,
   SUNDAY_TIMES_BADGE_TITLE,
 } from '../data/content';
@@ -29,7 +30,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenBooking }) => {
               </span>
             </h1>
             <p className="text-lg text-[#A3A3A3] leading-relaxed">
-              Chris has spent 15 years doing what he now teaches: building self-employed estate agency models from the ground up. He founded The Estate Agency, scaled it nationally, and sold it to TAUK in 2025, where he now serves as CCO. TAUK is recognised in The Sunday Times 100, celebrating Britain's fastest-growing private companies — ranked #74 in 2026.
+              Chris has spent 15 years doing what he now teaches: building self-employed estate agency models from the ground up. He founded The Estate Agency, scaled it nationally, and sold it to TAUK in 2025, where he now serves as CCO. {SUNDAY_TIMES_ABOUT_LINE}
             </p>
             <div className="pt-2 flex flex-col sm:flex-row gap-4">
               <button

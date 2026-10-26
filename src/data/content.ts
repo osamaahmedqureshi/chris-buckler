@@ -1,30 +1,25 @@
 import type { Testimonial, ResourceItem, PodcastEpisode, EventItem } from '../types';
 
 /**
- * Shared site copy — keep labels consistent across Header / Hero / Footer / Resources.
+ * Shared recognition + CTA copy (single source of truth).
  *
- * Sunday Times 100 (verified): TAUK ranked #74 on The Sunday Times 100 2026 —
- * official list of “Britain’s fastest-growing private companies.”
- * Sources: Property Industry Eye; theagencyuk.com; thetimes.com/sunday-times-100-fast-growth
+ * Sunday Times 100 verified: TAUK ranked #74 on The Sunday Times 100 2026 —
+ * Britain’s fastest-growing private companies.
  */
-export const SUNDAY_TIMES_RECOGNITION =
-  "Recognised in The Sunday Times 100, celebrating Britain's fastest-growing private companies.";
-
 export const SUNDAY_TIMES_BADGE_TITLE = 'Sunday Times 100';
-export const SUNDAY_TIMES_BADGE_SUBLINE = "Britain's fastest-growing private companies";
+export const SUNDAY_TIMES_BADGE_SUBLINE =
+  "Britain's fastest-growing private companies";
+export const SUNDAY_TIMES_ABOUT_LINE =
+  "TAUK is recognised in The Sunday Times 100, celebrating Britain's fastest-growing private companies — ranked #74 in 2026.";
 
 /**
- * Advanced Commission CTA labels.
- *
- * PENDING CLIENT CONFIRMATION:
- * Client requested replacement beginning “Financial Support for…”
- * Full phrase was not supplied — do not invent the remainder.
- * Keep published UI on ADVANCED_COMMISSION_* labels until approved.
+ * Advanced Commission CTAs.
+ * Client requested a rename beginning “Financial Support for…” —
+ * full phrase not yet confirmed, so published labels stay unchanged.
+ * When confirmed, update ADVANCED_COMMISSION_CTA_LABEL / GUIDE_CTA only.
  */
 export const ADVANCED_COMMISSION_CTA_LABEL = 'Advanced Commission';
 export const ADVANCED_COMMISSION_GUIDE_CTA = 'Free Advanced Commission guide';
-/** Incomplete client draft — not wired into UI until full phrase is confirmed. */
-export const ADVANCED_COMMISSION_CTA_PENDING = 'Financial Support for…';
 
 export const TESTIMONIALS: Testimonial[] = [
   {
@@ -92,7 +87,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FREE_RESOURCES: ResourceItem[] = [
   {
     id: 'advanced-commission',
-    title: 'Advanced Commission Guide',
+    title: `${ADVANCED_COMMISSION_CTA_LABEL} Guide`,
     category: 'Cashflow & Revenue',
     tagline: 'Unlock up to 30% upfront — and up to £5,000 per month — without waiting months for completion.',
     description:
