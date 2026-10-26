@@ -1,6 +1,10 @@
 import React from 'react';
 import { Award, ArrowRight, Globe } from 'lucide-react';
 import { Reveal } from './Reveal';
+import {
+  SUNDAY_TIMES_BADGE_SUBLINE,
+  SUNDAY_TIMES_BADGE_TITLE,
+} from '../data/content';
 
 interface AboutViewProps {
   onOpenBooking: () => void;
@@ -25,7 +29,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenBooking }) => {
               </span>
             </h1>
             <p className="text-lg text-[#A3A3A3] leading-relaxed">
-              Chris has spent 15 years doing what he now teaches: building self-employed estate agency models from the ground up. He founded The Estate Agency, scaled it nationally, and sold it to TAUK in 2025, where he now serves as CCO at one of Britain’s fastest-growing companies, ranked 74th on the Sunday Times Hundred 2026.
+              Chris has spent 15 years doing what he now teaches: building self-employed estate agency models from the ground up. He founded The Estate Agency, scaled it nationally, and sold it to TAUK in 2025, where he now serves as CCO. TAUK is recognised in The Sunday Times 100, celebrating Britain's fastest-growing private companies — ranked #74 in 2026.
             </p>
             <div className="pt-2 flex flex-col sm:flex-row gap-4">
               <button
@@ -77,8 +81,10 @@ export const AboutView: React.FC<AboutViewProps> = ({ onOpenBooking }) => {
               <div className="bg-[#161617] p-4 rounded-xl border border-[#2A2A2A] flex items-center gap-3">
                 <Award className="w-8 h-8 text-[#B59A6D] shrink-0" />
                 <div className="text-xs">
-                  <span className="font-bold text-white block">Sunday Times 100</span>
-                  <span className="text-[#A3A3A3]">Ranked #74 with TAUK (2026)</span>
+                  <span className="font-bold text-white block">{SUNDAY_TIMES_BADGE_TITLE}</span>
+                  <span className="text-[#A3A3A3]">
+                    #74 with TAUK (2026) — {SUNDAY_TIMES_BADGE_SUBLINE}
+                  </span>
                 </div>
               </div>
               <div className="bg-[#161617] p-4 rounded-xl border border-[#2A2A2A] flex items-center gap-3">

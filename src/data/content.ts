@@ -1,5 +1,31 @@
 import type { Testimonial, ResourceItem, PodcastEpisode, EventItem } from '../types';
 
+/**
+ * Shared site copy — keep labels consistent across Header / Hero / Footer / Resources.
+ *
+ * Sunday Times 100 (verified): TAUK ranked #74 on The Sunday Times 100 2026 —
+ * official list of “Britain’s fastest-growing private companies.”
+ * Sources: Property Industry Eye; theagencyuk.com; thetimes.com/sunday-times-100-fast-growth
+ */
+export const SUNDAY_TIMES_RECOGNITION =
+  "Recognised in The Sunday Times 100, celebrating Britain's fastest-growing private companies.";
+
+export const SUNDAY_TIMES_BADGE_TITLE = 'Sunday Times 100';
+export const SUNDAY_TIMES_BADGE_SUBLINE = "Britain's fastest-growing private companies";
+
+/**
+ * Advanced Commission CTA labels.
+ *
+ * PENDING CLIENT CONFIRMATION:
+ * Client requested replacement beginning “Financial Support for…”
+ * Full phrase was not supplied — do not invent the remainder.
+ * Keep published UI on ADVANCED_COMMISSION_* labels until approved.
+ */
+export const ADVANCED_COMMISSION_CTA_LABEL = 'Advanced Commission';
+export const ADVANCED_COMMISSION_GUIDE_CTA = 'Free Advanced Commission guide';
+/** Incomplete client draft — not wired into UI until full phrase is confirmed. */
+export const ADVANCED_COMMISSION_CTA_PENDING = 'Financial Support for…';
+
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'james-hall',

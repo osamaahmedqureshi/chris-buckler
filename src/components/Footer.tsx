@@ -1,6 +1,10 @@
 import React from 'react';
 import { Linkedin, Instagram, Facebook, Youtube, ArrowRight } from 'lucide-react';
 import type { PageView } from '../types';
+import {
+  ADVANCED_COMMISSION_CTA_LABEL,
+  SUNDAY_TIMES_BADGE_TITLE,
+} from '../data/content';
 
 interface FooterProps {
   onNavigate: (view: PageView) => void;
@@ -33,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
             </p>
 
             <div className="pt-2 text-xs text-[#B59A6D] font-mono">
-              Chief Commercial Officer at The Agency UK (TAUK) • Sunday Times 100 (#74)
+              Chief Commercial Officer at The Agency UK (TAUK) • {SUNDAY_TIMES_BADGE_TITLE} (#74)
             </div>
 
             {/* Social Media Links from live site */}
@@ -139,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
                   >
-                    Advanced Commission
+                    {ADVANCED_COMMISSION_CTA_LABEL}
                   </a>
                 </li>
                 <li>

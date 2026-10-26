@@ -2,6 +2,11 @@ import React from 'react';
 import { ArrowRight, Star } from 'lucide-react';
 import { motion } from 'motion/react';
 import type { PageView } from '../types';
+import {
+  ADVANCED_COMMISSION_GUIDE_CTA,
+  SUNDAY_TIMES_BADGE_SUBLINE,
+  SUNDAY_TIMES_BADGE_TITLE,
+} from '../data/content';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -72,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 onClick={() => onNavigate('resources')}
                 className="btn-ghost w-full px-6 py-3 rounded-full border border-white/35 bg-black/30 backdrop-blur-sm text-white font-medium text-sm cursor-pointer"
               >
-                Free Advanced Commission guide
+                {ADVANCED_COMMISSION_GUIDE_CTA}
               </button>
             </div>
 
@@ -131,7 +136,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 onClick={() => onNavigate('resources')}
                 className="btn-ghost px-6 py-4 rounded-full border border-white/15 bg-white/5 text-[#F5F5F5] font-medium text-base cursor-pointer"
               >
-                Free Advanced Commission guide
+                {ADVANCED_COMMISSION_GUIDE_CTA}
               </button>
             </div>
 
@@ -142,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 ))}
               </div>
               <p className="text-sm text-[#A3A3A3]">
-                CCO, The Agency UK · Sunday Times 100
+                CCO, The Agency UK · {SUNDAY_TIMES_BADGE_TITLE}
               </p>
             </div>
           </motion.div>
@@ -181,9 +186,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
               transition={{ delay: 0.7, duration: 0.7, ease }}
             >
               <span className="font-editorial text-3xl text-[#B59A6D] leading-none">#74</span>
-              <span className="text-xs text-[#E7E2D6] leading-snug">
-                Sunday Times 100
-                <span className="block text-[#8E887E]">Britain's fastest-growing</span>
+              <span className="text-xs text-[#E7E2D6] leading-snug max-w-[11.5rem]">
+                {SUNDAY_TIMES_BADGE_TITLE}
+                <span className="block text-[#8E887E]">{SUNDAY_TIMES_BADGE_SUBLINE}</span>
               </span>
             </motion.div>
           </motion.div>
