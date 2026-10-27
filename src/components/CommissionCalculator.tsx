@@ -193,7 +193,7 @@ export const CommissionCalculator: React.FC<CommissionCalculatorProps> = ({ onOp
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Traditional Agency Retains (30%):</span>
+                  <span>TAUK Split (30%):</span>
                   <span className="text-[#6B6B6B] font-mono">{formatCurrency(feePerDeal * 0.3)}</span>
                 </div>
               </div>
