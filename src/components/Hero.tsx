@@ -74,7 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
-                onClick={() => onNavigate('resources')}
+                onClick={() => onNavigate('advanced-commission')}
                 className="btn-ghost w-full px-6 py-3 rounded-full border border-white/35 bg-black/30 backdrop-blur-sm text-white font-medium text-sm cursor-pointer"
               >
                 {FINANCIAL_SUPPORT_CTA}
@@ -133,7 +133,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onNavigate }) => {
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
-                onClick={() => onNavigate('resources')}
+                onClick={() => onNavigate('advanced-commission')}
                 className="btn-ghost px-6 py-4 rounded-full border border-white/15 bg-white/5 text-[#F5F5F5] font-medium text-base cursor-pointer"
               >
                 {FINANCIAL_SUPPORT_CTA}

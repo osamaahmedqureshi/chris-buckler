@@ -1,4 +1,10 @@
-export type PageView = 'home' | 'about' | 'resources' | 'podcast' | 'events';
+export type PageView =
+  | 'home'
+  | 'about'
+  | 'resources'
+  | 'podcast'
+  | 'events'
+  | 'advanced-commission';
 
 export interface Testimonial {
   id: string;

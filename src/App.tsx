@@ -13,19 +13,17 @@ import { AboutView } from './components/AboutView';
 import { ResourcesView } from './components/ResourcesView';
 import { PodcastView } from './components/PodcastView';
 import { EventsView } from './components/EventsView';
+import { AdvancedCommissionView } from './components/AdvancedCommissionView';
 import { Footer } from './components/Footer';
-import { BookingModal } from './components/BookingModal';
 import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { Reveal } from './components/Reveal';
 import { CustomCursor } from './components/CustomCursor';
+import { openDiscoveryCall } from './data/links';
 import type { PageView } from './types';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<PageView>('home');
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [initialInterestNote, setInitialInterestNote] = useState('');
 
-  // Handle URL hash changes or smooth scroll to top on view change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [currentView]);
@@ -34,46 +32,23 @@ export default function App() {
     setCurrentView(view);
   };
 
-  const handleOpenBooking = (interestNote = '') => {
-    setInitialInterestNote(interestNote);
-    setIsBookingOpen(true);
-  };
-
-  const handleCloseBooking = () => {
-    setIsBookingOpen(false);
-    setInitialInterestNote('');
-  };
-
   return (
     <div className="min-h-screen bg-[#0E0E0F] text-[#F5F5F5] selection:bg-[#B59A6D] selection:text-[#0E0E0F] flex flex-col justify-between">
       <CustomCursor />
-      {/* 3-Zone Fixed Navbar with Real Logo */}
       <Header
         currentView={currentView}
         onNavigate={handleNavigate}
-        onOpenBooking={() => handleOpenBooking('Header CTA - Discovery Call')}
+        onOpenBooking={openDiscoveryCall}
       />
 
-      {/* Main Content Area Routing */}
       <main className="flex-1">
         {currentView === 'home' && (
           <>
-            {/* 1. Hero Section with Real Chris Buckler Portrait & Trusted Headshots */}
-            <Hero
-              onOpenBooking={() => handleOpenBooking('Hero CTA - Strategy Call')}
-              onNavigate={handleNavigate}
-            />
+            <Hero onOpenBooking={openDiscoveryCall} onNavigate={handleNavigate} />
 
-            {/* 2. Four Core Pillars: Coaching, Events, Podcasts, Keynotes */}
-            <PillarsSection
-              onNavigate={handleNavigate}
-              onOpenBooking={() => handleOpenBooking('Pillars - 1-on-1 Mentorship')}
-            />
+            <PillarsSection onNavigate={handleNavigate} onOpenBooking={openDiscoveryCall} />
 
-            {/* 3. Interactive 70% Commission vs. Employed Salary Simulator */}
-            <CommissionCalculator
-              onOpenBooking={() => handleOpenBooking('Calculator - 70% Commission Model')}
-            />
+            <CommissionCalculator />
 
             <section className="py-24 sm:py-32 bg-[#0E0E0F] relative overflow-hidden">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,13 +56,25 @@ export default function App() {
                   <Reveal from="left" className="lg:col-span-6">
                     <div className="grid grid-cols-2 gap-3">
                       <div className="photo-zoom rounded-[1.4rem] overflow-hidden border border-white/10 col-span-2">
-                        <img src="/images/chris-buckler-headshot.png" alt="Chris Buckler" className="w-full h-[340px] object-cover object-top" />
+                        <img
+                          src="/images/chris-buckler-headshot.png"
+                          alt="Chris Buckler"
+                          className="w-full h-[340px] object-cover object-top"
+                        />
                       </div>
                       <div className="photo-zoom rounded-[1.2rem] overflow-hidden border border-white/10">
-                        <img src="/images/chris-buckler-coaching.jpg" alt="Chris coaching" className="w-full h-36 object-cover" />
+                        <img
+                          src="/images/chris-buckler-coaching.jpg"
+                          alt="Chris coaching"
+                          className="w-full h-36 object-cover"
+                        />
                       </div>
                       <div className="photo-zoom rounded-[1.2rem] overflow-hidden border border-white/10">
-                        <img src="/images/chris-buckler-office.jpg" alt="Working from the studio" className="w-full h-36 object-cover" />
+                        <img
+                          src="/images/chris-buckler-office.jpg"
+                          alt="Working from the studio"
+                          className="w-full h-36 object-cover"
+                        />
                       </div>
                     </div>
                   </Reveal>
@@ -99,10 +86,14 @@ export default function App() {
                       <span className="font-editorial italic font-normal text-[#B59A6D]"> sold.</span>
                     </h2>
                     <p className="text-base text-[#B7B1A6] leading-relaxed">
-                      Chris has spent 15 years doing what he now teaches: building self-employed estate agency models from the ground up. He founded The Estate Agency, scaled it nationally, and sold it to TAUK in 2025, where he now serves as Chief Commercial Officer.
+                      Chris has spent 15 years doing what he now teaches: building self-employed estate
+                      agency models from the ground up. He founded The Estate Agency, scaled it
+                      nationally, and sold it to TAUK in 2025, where he now serves as Chief Commercial
+                      Officer.
                     </p>
                     <p className="text-base text-[#B7B1A6] leading-relaxed">
-                      He has represented buyers and sellers in prime markets including Dubai, New York, Sydney, and Kuala Lumpur — and now helps UK agents keep more of every fee.
+                      He has represented buyers and sellers in prime markets including Dubai, New York,
+                      Sydney, and Kuala Lumpur — and now helps UK agents keep more of every fee.
                     </p>
                     <button
                       onClick={() => handleNavigate('about')}
@@ -116,13 +107,14 @@ export default function App() {
               </div>
             </section>
 
-            {/* 5. Real Client Testimonials ("You're in great company") */}
-            <TestimonialsSection
-              onOpenBooking={() => handleOpenBooking('Testimonials - Partner Network')}
-            />
+            <TestimonialsSection onOpenBooking={openDiscoveryCall} />
 
             <section className="relative py-28 overflow-hidden">
-              <img src="/images/chris-buckler-hero.png" alt="" className="absolute inset-0 w-full h-full object-cover object-center opacity-30" />
+              <img
+                src="/images/chris-buckler-hero.png"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover object-center opacity-30"
+              />
               <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E0F] via-[#0E0E0F]/75 to-[#0E0E0F]" />
               <Reveal className="relative z-10 max-w-3xl mx-auto px-4 text-center space-y-6">
                 <p className="text-xs tracking-[0.28em] uppercase text-[#B59A6D]">Ready to grow</p>
@@ -131,11 +123,13 @@ export default function App() {
                   <span className="font-editorial italic font-normal text-[#B59A6D]"> every fee.</span>
                 </h2>
                 <p className="text-base sm:text-lg text-[#D5D0C6] leading-relaxed">
-                  Traditional agencies have capped income and limited freedom for too long. There is a model where you keep more of what you earn, work the hours that suit you, and build a profitable business so that you can live the life that you want.
+                  Traditional agencies have capped income and limited freedom for too long. There is a
+                  model where you keep more of what you earn, work the hours that suit you, and build a
+                  profitable business so that you can live the life that you want.
                 </p>
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
-                    onClick={() => handleOpenBooking('Ready to Grow - Strategy Call')}
+                    onClick={openDiscoveryCall}
                     className="btn-primary w-full sm:w-auto px-8 py-4 rounded-full bg-[#B59A6D] text-[#0E0E0F] font-semibold flex items-center justify-center gap-2 cursor-pointer"
                   >
                     Book a free 15-minute call
@@ -149,43 +143,32 @@ export default function App() {
                   </button>
                 </div>
                 <div className="pt-2 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-[#C9C3B8]">
-                  <span className="inline-flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#B59A6D]" /> Direct with Chris</span>
-                  <span className="inline-flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#B59A6D]" /> Confidential</span>
+                  <span className="inline-flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-[#B59A6D]" /> Direct with Chris
+                  </span>
+                  <span className="inline-flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#B59A6D]" /> Confidential
+                  </span>
                 </div>
               </Reveal>
             </section>
           </>
         )}
 
-        {currentView === 'about' && (
-          <AboutView onOpenBooking={() => handleOpenBooking('About View - Discovery Call')} />
-        )}
+        {currentView === 'about' && <AboutView onOpenBooking={openDiscoveryCall} />}
 
         {currentView === 'resources' && (
-          <ResourcesView onOpenBooking={() => handleOpenBooking('Resources View - Discovery Call')} />
+          <ResourcesView onOpenBooking={openDiscoveryCall} onNavigate={handleNavigate} />
         )}
 
-        {currentView === 'podcast' && (
-          <PodcastView onOpenBooking={() => handleOpenBooking('Podcast View - Guest Inquiries')} />
-        )}
+        {currentView === 'advanced-commission' && <AdvancedCommissionView />}
 
-        {currentView === 'events' && (
-          <EventsView onOpenBooking={() => handleOpenBooking('Events View - Mastermind Inquiries')} />
-        )}
+        {currentView === 'podcast' && <PodcastView onOpenBooking={openDiscoveryCall} />}
+
+        {currentView === 'events' && <EventsView onOpenBooking={openDiscoveryCall} />}
       </main>
 
-      {/* Footer with Registered Company Details & Social Links */}
-      <Footer
-        onNavigate={handleNavigate}
-        onOpenBooking={() => handleOpenBooking('Footer - Discovery Call')}
-      />
-
-      {/* Interactive 15-Minute Discovery Call Booking Modal */}
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={handleCloseBooking}
-        initialInterest={initialInterestNote}
-      />
+      <Footer onNavigate={handleNavigate} onOpenBooking={openDiscoveryCall} />
     </div>
   );
-}
+};

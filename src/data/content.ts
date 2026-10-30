@@ -1,4 +1,5 @@
 import type { Testimonial, ResourceItem, PodcastEpisode, EventItem } from '../types';
+import { LINKS } from './links';
 
 /** Client meeting (Oct 2026) — shared labels */
 export const FINANCIAL_SUPPORT_CTA = 'Financial support for going self-employed';
@@ -74,20 +75,37 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FREE_RESOURCES: ResourceItem[] = [
   {
     id: 'advanced-commission',
-    title: FINANCIAL_SUPPORT_CTA,
+    title: 'Advanced Commission',
     category: 'Cashflow & Revenue',
-    tagline: 'Unlock up to 30% upfront — and up to £5,000 per month — without waiting months for completion.',
+    tagline: 'Win the instruction, meet the criteria, and 30% of your commission arrives that week.',
     description:
-      'Traditional estate agents wait 16 to 24 weeks from instruction to completion to receive a fraction of their commission. The Advanced Commission model changes everything by providing capital on day one of listing, unlocking up to £5,000 per month upon taking the instruction.',
+      'Advanced Commission is a growth tool. Model your fee on a dedicated page, then download the free guide from our funnel.',
     highlights: [
-      'How to access up to 30% of your fee upfront upon winning the listing',
-      'Unlock up to £5,000 per month and solve the 4–6 month conveyancing lag',
-      'The exact contract clauses and legal partner agreements used across the UK',
-      'How to reinvest upfront capital into hyper-local vendor marketing',
+      'Interactive Advanced Commission calculator on its own page',
+      'Compare with vs without advanced commission on any fee',
+      'Download the free Advanced Commission guide',
+      'Book a Discovery Call directly with Chris',
     ],
     pages: 18,
-    format: 'Comprehensive PDF Guide + Calculator',
-    funnelUrl: 'https://funnels.chrisbuckler.co.uk/home-page-advanced-commission',
+    format: 'Dedicated page + PDF Guide',
+    funnelUrl: LINKS.advancedCommissionGuide,
+  },
+  {
+    id: 'prospectus',
+    title: 'Partner Agent Prospectus',
+    category: 'Agency Scaling',
+    tagline: 'The blueprint for scaling from solo broker to a team of self-employed partners.',
+    description:
+      'Everything you need to attract, onboard, and retain high-performing estate agents under your personal umbrella brand.',
+    highlights: [
+      'Recruitment and onboarding for partner agents',
+      'Commission split tiering while preserving margins',
+      'Technology, compliance, and back-office stack',
+      'Building an asset that pays overrides',
+    ],
+    pages: 24,
+    format: 'Executive Prospectus',
+    funnelUrl: LINKS.prospectus,
   },
   {
     id: 'transition-plan',
@@ -104,7 +122,7 @@ export const FREE_RESOURCES: ResourceItem[] = [
     ],
     pages: 16,
     format: 'Action Checklist & Spreadsheet',
-    funnelUrl: 'https://funnels.chrisbuckler.co.uk/home-page-498370',
+    funnelUrl: LINKS.transitionPlan,
   },
   {
     id: 'business-plan',
@@ -121,7 +139,7 @@ export const FREE_RESOURCES: ResourceItem[] = [
     ],
     pages: 12,
     format: 'Excel Spreadsheet + Video Walkthrough',
-    funnelUrl: 'https://funnels.chrisbuckler.co.uk/buisness-plan',
+    funnelUrl: LINKS.businessPlan,
   },
 ];
 
@@ -136,9 +154,9 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     summary:
       'James breaks down the exact emotional and commercial leap from managing a corporate branch on 60-hour weeks to generating over £250k in personal fee income in his first 18 months.',
     topics: ['Corporate branch burnout', 'The first 90 days', 'Winning instructions over 1.5%', 'Work-life balance with family'],
-    spotifyUrl: 'https://open.spotify.com/',
-    appleUrl: 'https://podcasts.apple.com/',
-    youtubeUrl: 'https://youtube.com/',
+    spotifyUrl: LINKS.spotify,
+    appleUrl: LINKS.applePodcasts,
+    youtubeUrl: LINKS.youtube,
   },
   {
     id: 'ep-41',
@@ -150,9 +168,9 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     summary:
       'Why modern affluent vendors care about the personal broker representing their property rather than the physical shop window on the high street.',
     topics: ['High street obsolescence', 'Winning £5m+ stock', 'Personal branding on LinkedIn', 'Negotiating sole agency'],
-    spotifyUrl: 'https://open.spotify.com/',
-    appleUrl: 'https://podcasts.apple.com/',
-    youtubeUrl: 'https://youtube.com/',
+    spotifyUrl: LINKS.spotify,
+    appleUrl: LINKS.applePodcasts,
+    youtubeUrl: LINKS.youtube,
   },
   {
     id: 'ep-40',
@@ -164,9 +182,9 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     summary:
       'Chris and Tihon discuss the commercial acquisition of The Estate Agency by TAUK, ranking #74 on the Sunday Times 100, and where the UK agency model is heading by 2030.',
     topics: ['Sunday Times 100 growth', 'Acquisition mechanics', 'The USA vs UK brokerage model', 'Broker equity and scale'],
-    spotifyUrl: 'https://open.spotify.com/',
-    appleUrl: 'https://podcasts.apple.com/',
-    youtubeUrl: 'https://youtube.com/',
+    spotifyUrl: LINKS.spotify,
+    appleUrl: LINKS.applePodcasts,
+    youtubeUrl: LINKS.youtube,
   },
   {
     id: 'ep-39',
@@ -178,9 +196,9 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     summary:
       'How to structure your Monday morning kick-offs, maintain relentless prospecting momentum, and never fall into the trap of procrastination when you are your own boss.',
     topics: ['Daily routine breakdown', 'Dealing with rejected offers', 'Vendor management psychology', 'Pipeline discipline'],
-    spotifyUrl: 'https://open.spotify.com/',
-    appleUrl: 'https://podcasts.apple.com/',
-    youtubeUrl: 'https://youtube.com/',
+    spotifyUrl: LINKS.spotify,
+    appleUrl: LINKS.applePodcasts,
+    youtubeUrl: LINKS.youtube,
   },
 ];
 

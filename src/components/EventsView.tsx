@@ -10,16 +10,6 @@ interface EventsViewProps {
 
 export const EventsView: React.FC<EventsViewProps> = ({ onOpenBooking }) => {
   const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
-  const [rsvpName, setRsvpName] = useState('');
-  const [rsvpEmail, setRsvpEmail] = useState('');
-  const [rsvpAgency, setRsvpAgency] = useState('');
-  const [rsvpSuccess, setRsvpSuccess] = useState(false);
-
-  const handleRsvpSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!rsvpEmail.includes('@') || !rsvpName.trim()) return;
-    setRsvpSuccess(true);
-  };
 
   return (
     <div className="pt-32 pb-24 bg-[#0E0E0F] text-[#F5F5F5]">
@@ -138,13 +128,7 @@ export const EventsView: React.FC<EventsViewProps> = ({ onOpenBooking }) => {
                     {event.capacity}
                   </span>
                   <button
-                    onClick={() => {
-                      setSelectedEvent(event);
-                      setRsvpSuccess(false);
-                      setRsvpName('');
-                      setRsvpEmail('');
-                      setRsvpAgency('');
-                    }}
+                    onClick={() => setSelectedEvent(event)}
                     className="w-full py-3 px-6 rounded-xl bg-[#B59A6D] hover:bg-[#C9B088] text-[#0E0E0F] font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-[#B59A6D]/25 flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <Ticket className="w-4 h-4" />
@@ -170,89 +154,33 @@ export const EventsView: React.FC<EventsViewProps> = ({ onOpenBooking }) => {
                 ✕
               </button>
 
-              {rsvpSuccess ? (
-                <div className="text-center py-6 space-y-4">
-                  <div className="w-14 h-14 mx-auto rounded-full bg-[#B59A6D]/20 border border-[#B59A6D] flex items-center justify-center text-[#B59A6D]">
-                    <CheckCircle2 className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-2xl font-bold">Seat Reserved!</h3>
-                  <p className="text-xs sm:text-sm text-[#A3A3A3] leading-relaxed">
-                    Thank you, <span className="text-white font-semibold">{rsvpName}</span>. Your registration for{' '}
-                    <span className="text-white font-semibold">{selectedEvent.title}</span> has been received. Venue directions and agenda details will be emailed to{' '}
-                    <span className="text-[#B59A6D] font-semibold">{rsvpEmail}</span>.
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <span className="text-xs uppercase tracking-wider text-[#B59A6D] font-semibold">
+                    {selectedEvent.type}
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-bold">{selectedEvent.title}</h3>
+                  <p className="text-xs text-[#A3A3A3]">
+                    {selectedEvent.date} • {selectedEvent.location}
                   </p>
-                  <div className="pt-2">
-                    <button
-                      onClick={() => setSelectedEvent(null)}
-                      className="px-6 py-2.5 rounded-lg bg-[#B59A6D] text-[#0E0E0F] text-xs font-semibold cursor-pointer"
-                    >
-                      Done
-                    </button>
-                  </div>
                 </div>
-              ) : (
-                <div className="space-y-4">
-                  <div className="space-y-1">
-                    <span className="text-xs uppercase tracking-wider text-[#B59A6D] font-semibold">
-                      {selectedEvent.type} Registration
-                    </span>
-                    <h3 className="text-xl sm:text-2xl font-bold">{selectedEvent.title}</h3>
-                    <p className="text-xs text-[#A3A3A3]">
-                      {selectedEvent.date} • {selectedEvent.location}
-                    </p>
-                  </div>
-
-                  <form onSubmit={handleRsvpSubmit} className="space-y-3.5 pt-2">
-                    <div>
-                      <label className="block text-xs font-medium text-[#A3A3A3] mb-1">
-                        Your Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={rsvpName}
-                        onChange={(e) => setRsvpName(e.target.value)}
-                        placeholder="e.g. Richard Davies"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-[#0E0E0F] border border-[#2A2A2A] text-sm text-white focus:outline-none focus:border-[#B59A6D]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-[#A3A3A3] mb-1">
-                        Work Email *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        value={rsvpEmail}
-                        onChange={(e) => setRsvpEmail(e.target.value)}
-                        placeholder="richard@daviesproperty.co.uk"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-[#0E0E0F] border border-[#2A2A2A] text-sm text-white focus:outline-none focus:border-[#B59A6D]"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-medium text-[#A3A3A3] mb-1">
-                        Current Agency / Self-Employed Trading Name
-                      </label>
-                      <input
-                        type="text"
-                        value={rsvpAgency}
-                        onChange={(e) => setRsvpAgency(e.target.value)}
-                        placeholder="e.g. Davies & Partners"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-[#0E0E0F] border border-[#2A2A2A] text-sm text-white focus:outline-none focus:border-[#B59A6D]"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      className="w-full py-3.5 px-6 rounded-xl bg-[#B59A6D] hover:bg-[#C9B088] text-[#0E0E0F] font-semibold text-sm transition-all shadow-lg shadow-[#B59A6D]/25 cursor-pointer mt-2"
-                    >
-                      Confirm Event Seat
-                    </button>
-                    <p className="text-center text-[11px] text-[#6B6B6B]">
-                      Strictly limited attendance to preserve masterminding depth.
-                    </p>
-                  </form>
-                </div>
-              )}
+                <p className="text-sm text-[#A3A3A3] leading-relaxed">
+                  Registrations are handled on a Discovery Call with Chris — no on-site form capture.
+                </p>
+                <button
+                  onClick={() => {
+                    setSelectedEvent(null);
+                    onOpenBooking();
+                  }}
+                  className="w-full py-3.5 px-6 rounded-xl bg-[#B59A6D] hover:bg-[#C9B088] text-[#0E0E0F] font-semibold text-sm transition-all shadow-lg shadow-[#B59A6D]/25 cursor-pointer mt-2 flex items-center justify-center gap-2"
+                >
+                  Book a Discovery Call
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <p className="text-center text-[11px] text-[#6B6B6B]">
+                  Strictly limited attendance to preserve masterminding depth.
+                </p>
+              </div>
             </div>
           </div>
         )}

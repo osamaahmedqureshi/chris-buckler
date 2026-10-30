@@ -1,11 +1,8 @@
 import React from 'react';
 import { Linkedin, Instagram, Facebook, Youtube, ArrowRight } from 'lucide-react';
 import type { PageView } from '../types';
-import {
-  FINANCIAL_SUPPORT_CTA,
-  SUNDAY_TIMES_BADGE_SUBLINE,
-  SUNDAY_TIMES_BADGE_TITLE,
-} from '../data/content';
+import { SUNDAY_TIMES_BADGE_SUBLINE, SUNDAY_TIMES_BADGE_TITLE } from '../data/content';
+import { LINKS } from '../data/links';
 
 interface FooterProps {
   onNavigate: (view: PageView) => void;
@@ -74,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://youtube.com/"
+                href={LINKS.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-[#161617] border border-[#2A2A2A] flex items-center justify-center text-[#A3A3A3] hover:text-[#B59A6D] hover:border-[#B59A6D] transition-colors"
@@ -141,18 +138,26 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
               </span>
               <ul className="space-y-2.5">
                 <li>
+                  <button
+                    onClick={() => onNavigate('advanced-commission')}
+                    className="hover:text-white transition-colors cursor-pointer text-left"
+                  >
+                    Advanced Commission
+                  </button>
+                </li>
+                <li>
                   <a
-                    href="https://funnels.chrisbuckler.co.uk/home-page-advanced-commission"
+                    href={LINKS.prospectus}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
                   >
-                    {FINANCIAL_SUPPORT_CTA}
+                    Partner Agent Prospectus
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://funnels.chrisbuckler.co.uk/home-page-498370"
+                    href={LINKS.transitionPlan}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
@@ -162,7 +167,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 </li>
                 <li>
                   <a
-                    href="https://funnels.chrisbuckler.co.uk/buisness-plan"
+                    href={LINKS.businessPlan}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"

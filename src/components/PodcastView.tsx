@@ -2,6 +2,7 @@ import React from 'react';
 import { Radio, Play, ExternalLink, Headphones, ArrowRight, Share2, Sparkles } from 'lucide-react';
 import { Reveal } from './Reveal';
 import { PODCAST_EPISODES, PODCAST_NAME } from '../data/content';
+import { LINKS } from '../data/links';
 
 interface PodcastViewProps {
   onOpenBooking: () => void;
@@ -30,7 +31,7 @@ export const PodcastView: React.FC<PodcastViewProps> = ({ onOpenBooking }) => {
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
-                href="https://open.spotify.com/"
+                href={LINKS.spotify}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-3 rounded-xl bg-[#1DB954] hover:bg-[#1AA34A] text-white font-bold text-xs sm:text-sm flex items-center gap-2 transition-all shadow-md shadow-[#1DB954]/20"
@@ -39,7 +40,7 @@ export const PodcastView: React.FC<PodcastViewProps> = ({ onOpenBooking }) => {
                 <span>Listen on Spotify</span>
               </a>
               <a
-                href="https://podcasts.apple.com/"
+                href={LINKS.applePodcasts}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-3 rounded-xl bg-[#161617] hover:bg-[#1F1F1F] border border-[#2A2A2A] text-white font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
@@ -47,7 +48,7 @@ export const PodcastView: React.FC<PodcastViewProps> = ({ onOpenBooking }) => {
                 <span>Apple Podcasts</span>
               </a>
               <a
-                href="https://youtube.com/"
+                href={LINKS.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-3 rounded-xl bg-[#FF0000]/15 hover:bg-[#FF0000]/25 border border-[#FF0000]/40 text-rose-300 font-semibold text-xs sm:text-sm flex items-center gap-2 transition-colors"
